@@ -1,7 +1,7 @@
 # Cron Runner (Rust)
 
 Ultra-light HTTP scheduler in Rust with **per-second cron** precision.  
-Adds `X-Cron-Secret` to every request (compatible with middleware checks), supports custom headers and optional body per job, and exits cleanly if required variables are missing.
+Adds `X-Cron-Secret` to every request, supports custom headers and optional body per job.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/cron-rust?referralCode=1q5cCO&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
@@ -66,12 +66,13 @@ docker run --rm   -e SECRET=mysecret   -e CRON_JOBS='GET|https://httpbingo.org/s
 - Private networking avoids public egress and can be safer for service-to-service calls.
 
 ## Logs
-- Success: `YYYY-MM-DDTHH:MM:SSZ | OK | METHOD URL | STATUS`
-- Failure: `YYYY-MM-DDTHH:MM:SSZ | FAIL | METHOD URL | HTTP XXX (client/server error)` or transport error.
+- OK: `YYYY-MM-DDTHH:MM:SSZ | OK | METHOD URL | STATUS`
+- FAIL: `YYYY-MM-DDTHH:MM:SSZ | FAIL | METHOD URL | HTTP XXX (client/server error)` or transport error.
 
 ## Tech
 - Rust + `ureq` (sync, minimal) for HTTP.
 - `cron` crate for per-second schedules.
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/cron-rust?referralCode=1q5cCO&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
 
