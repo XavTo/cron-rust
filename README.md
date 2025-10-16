@@ -3,6 +3,8 @@
 Ultra-light HTTP scheduler in Rust with **per-second cron** precision.  
 Adds `X-Cron-Secret` to every request (compatible with middleware checks), supports custom headers and optional body per job, and exits cleanly if required variables are missing.
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/cron-rust?referralCode=1q5cCO&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
 ## Features
 - 6-field cron expressions (seconds included).
 - HTTP methods: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`, `OPTIONS`.
@@ -70,3 +72,6 @@ docker run --rm   -e SECRET=mysecret   -e CRON_JOBS='GET|https://httpbingo.org/s
 ## Tech
 - Rust + `ureq` (sync, minimal) for HTTP.
 - `cron` crate for per-second schedules.
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/cron-rust?referralCode=1q5cCO&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
